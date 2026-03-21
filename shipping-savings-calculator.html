@@ -810,7 +810,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Product Category</label>
+                        <label class="form-label">Product Category <span style="color: #dc2626;">*</span></label>
                         <select class="form-select" id="productCategory" required>
                             <option value="">Select your industry...</option>
                             <option value="furniture">Furniture / Home Goods</option>
@@ -1102,34 +1102,61 @@
         }
 
         function nextStep(fromStep) {
+            // Clear any existing error messages
+            document.querySelectorAll('.field-error').forEach(el => el.remove());
+            
+            let hasError = false;
+            
             // Basic validation
             if (fromStep === 1) {
                 if (!document.getElementById('annualSpend').value) {
-                    document.getElementById('annualSpend').classList.add('error');
-                    return;
+                    showFieldError('annualSpend', 'Please select your annual shipping spend');
+                    hasError = true;
                 }
                 if (!document.querySelector('input[name="carrier"]:checked')) {
-                    alert('Please select your primary carrier');
-                    return;
+                    showFieldError('carrier', 'Please select your primary carrier', true);
+                    hasError = true;
                 }
                 if (!document.getElementById('productCategory').value) {
-                    alert('Please select your product category');
-                    return;
+                    showFieldError('productCategory', 'Please select your product category');
+                    hasError = true;
                 }
             }
             
             if (fromStep === 2) {
                 if (!document.getElementById('packageWeight').value) {
-                    alert('Please select your average package weight');
-                    return;
+                    showFieldError('packageWeight', 'Please select your average package weight');
+                    hasError = true;
                 }
                 if (!document.querySelector('input[name="dimensions"]:checked')) {
-                    alert('Please select your package dimensions type');
-                    return;
+                    showFieldError('dimensions', 'Please select your package dimensions type', true);
+                    hasError = true;
                 }
             }
             
+            if (hasError) return;
+            
             showStep(fromStep + 1);
+        }
+        
+        function showFieldError(fieldId, message, isRadio = false) {
+            const errorEl = document.createElement('div');
+            errorEl.className = 'field-error';
+            errorEl.style.cssText = 'color: #dc2626; font-size: 0.875rem; margin-top: 0.5rem;';
+            errorEl.textContent = message;
+            
+            if (isRadio) {
+                const radioGroup = document.querySelector(`input[name="${fieldId}"]`).closest('.radio-group');
+                if (radioGroup) {
+                    radioGroup.appendChild(errorEl);
+                }
+            } else {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.insertAdjacentElement('afterend', errorEl);
+                    field.style.borderColor = '#dc2626';
+                }
+            }
         }
 
         function prevStep(fromStep) {
@@ -1207,6 +1234,16 @@
             // Update surcharges list
             const surchargesList = document.getElementById('savingsCategories');
             surchargesList.innerHTML = rates.surcharges.map(s => `<li>${s}</li>`).join('');
+            
+            // Conditional messaging based on spend threshold
+            const resultSubtitle = document.querySelector('.results-subtitle');
+            if (annualSpend >= 2000000) {
+                // $2M+ = gainshare path
+                resultSubtitle.textContent = 'Based on your inputs, we estimate you could recover this much annually through direct carrier negotiation. We work on a gainshare model — you only pay when savings are delivered.';
+            } else {
+                // < $2M = pre-negotiated rates path
+                resultSubtitle.textContent = 'Based on your inputs, we can likely implement these savings within the first week using our optimized rate structures. No upfront cost — you only pay for what you save.';
+            }
 
             showStep(4);
             
