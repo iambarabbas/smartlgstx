@@ -474,11 +474,14 @@
         .step:not(:last-child)::after {
             content: '→';
             position: absolute;
-            top: 28px;
-            right: -24px;
-            font-size: 1.5rem;
-            color: var(--gold);
+            top: 50%;
+            right: -36px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--navy);
             font-weight: bold;
+            opacity: 0.3;
+            z-index: 1;
         }
         
         .step-number {
