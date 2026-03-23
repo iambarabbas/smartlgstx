@@ -24,6 +24,45 @@
       ]
     }
     </script>
+    <style>
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: var(--navy, #001850);
+            padding: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
+            .mobile-menu a {
+                display: block;
+                color: white;
+                padding: 0.75rem 1rem;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .mobile-menu a:hover {
+                background: rgba(250,220,97,0.1);
+                color: #FADC61;
+            }
+        }
+    </style>
 </head>
 <body class="bg-white text-dark">
     <nav class="bg-navy text-white sticky top-0 z-50">
@@ -48,8 +87,26 @@
                     <a href="get-your-free-audit.html" class="bg-gold hover:bg-gold-dark text-navy font-semibold px-6 py-3 rounded-lg transition">Get Your Free Audit</a>
                 </div>
             </div>
+                    
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
-    </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="furniture-shipping-savings.html">Furniture & Home Goods</a>
+            <a href="mattress-shipping-savings.html">Mattress & Bedding</a>
+            <a href="auto-parts-shipping-savings.html">Auto Parts</a>
+            <a href="building-materials-shipping-savings.html">Building Materials</a>
+            <a href="fitness-shipping-savings.html">Fitness Equipment</a>
+            <a href="food-beverage-shipping-savings.html">Food & Beverage</a>
+            <a href="manufacturing-shipping-savings.html">Manufacturing</a>
+            <a href="get-your-free-audit.html">Get Your Free Audit</a>
+        </div>
+</nav>
 
     <section class="relative text-white py-16 md:py-24 overflow-hidden" style="background: url('images/Auto Parts Hero.jpg') center right / cover no-repeat;">
         <div class="absolute inset-0" style="background: linear-gradient(90deg, #001850 0%, #001850 35%, rgba(0,24,80,0.85) 55%, rgba(0,24,80,0.6) 75%, rgba(0,24,80,0.4) 100%);"></div>
@@ -222,5 +279,10 @@
         </svg>
     </a>
 
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
