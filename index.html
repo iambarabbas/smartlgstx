@@ -254,12 +254,15 @@
             margin: 0 auto;
             position: relative;
             z-index: 2;
+            padding: 0 24px;
         }
         
         @media (min-width: 1024px) {
             .hero-container {
-                max-width: 65%;
-                margin: 0;
+                max-width: 1200px;
+                width: 65%;
+                margin: 0 auto;
+                padding-left: max(24px, calc((100% - 1200px) / 2));
             }
         }
         
