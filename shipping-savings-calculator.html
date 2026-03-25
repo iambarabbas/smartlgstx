@@ -701,16 +701,79 @@
         }
         
         /* Footer on calculator */
-        .calculator-footer {
+        /* Footer */
+        .footer {
             background: var(--dark);
             color: white;
-            padding: 32px 24px;
-            text-align: center;
-            margin-top: 48px;
+            padding: 64px 24px 32px;
         }
         
-        .calculator-footer a {
-            color: var(--gold);
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+        
+        .footer-col h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #94a3b8;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 32px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
         }
     </style>
     <style>
@@ -1441,9 +1504,46 @@
     </script>
     
     <!-- Footer -->
-    <footer class="calculator-footer">
-        <div class="logo" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Smart<span style="color: var(--gold);">LGSTX</span></div>
-        <p style="color: #9ca3af; font-size: 0.875rem;">© 2026 Smart LGSTX. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Smart<span>LGSTX</span></a>
+                    <p>Shipping cost optimization backed by 50+ years of carrier-side experience. We only get paid when you save.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="get-your-free-audit.html">Free Audit</a></li>
+                        <li><a href="shipping-savings-calculator.html">Savings Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="furniture-shipping-savings.html">Furniture</a></li>
+                        <li><a href="mattress-shipping-savings.html">Mattress</a></li>
+                        <li><a href="auto-parts-shipping-savings.html">Auto Parts</a></li>
+                        <li><a href="fitness-shipping-savings.html">Fitness</a></li>
+                        <li><a href="building-materials-shipping-savings.html">Building Materials</a></li>
+                        <li><a href="food-beverage-shipping-savings.html">Food & Beverage</a></li>
+                        <li><a href="manufacturing-shipping-savings.html">Manufacturing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul>
+                        <li><a href="get-your-free-audit.html">Free Shipping Audit</a></li>
+                        <li><a href="shipping-savings-calculator.html">Calculate Savings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Smart LGSTX. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
     <script>
         function toggleMobileMenu() {
