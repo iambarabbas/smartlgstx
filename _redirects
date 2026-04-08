@@ -1,0 +1,3 @@
+# Force non-www to www
+https://smartlgstx.com/* https://www.smartlgstx.com/:splat 301!
+http://smartlgstx.com/* https://www.smartlgstx.com/:splat 301!
