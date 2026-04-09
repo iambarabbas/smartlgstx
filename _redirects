@@ -1,3 +1,2 @@
-# Force non-www to www
-https://smartlgstx.com/* https://www.smartlgstx.com/:splat 301!
-http://smartlgstx.com/* https://www.smartlgstx.com/:splat 301!
+# Cloudflare Pages redirects - only relative paths allowed
+# Domain-level www redirect should be configured in Cloudflare DNS/Rules instead
