@@ -14,14 +14,14 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipping Savings Calculator | Smart LGSTX</title>
-    <link rel="canonical" href="https://www.smartlgstx.com/shipping-savings-calculator.html" />
+    <link rel="canonical" href="https://www.smartlgstx.com/shipping-savings-calculator" />
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Calculate your potential UPS and FedEx shipping savings in 4 quick questions. Smart LGSTX gives you a specific dollar estimate based on your product type, carrier, and annual spend." />
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Smart LGSTX" />
-    <meta property="og:url" content="https://www.smartlgstx.com/shipping-savings-calculator.html" />
+    <meta property="og:url" content="https://www.smartlgstx.com/shipping-savings-calculator" />
     <meta property="og:title" content="Shipping Savings Calculator — How Much Are You Overpaying? | Smart LGSTX" />
     <meta property="og:description" content="4 questions. Specific dollar estimate. Find out how much you could recover from your UPS or FedEx contract — no data required, no commitment." />
     <meta property="og:image" content="https://www.smartlgstx.com/images/SmartLogistics%20Homepage%20Hero%20Section.jpg" />
@@ -467,6 +467,18 @@
         }
         
         /* Results Section */
+        /* Quick estimate preview */
+        .quick-estimate {
+            display: none;
+            background: linear-gradient(135deg, #0a2463 0%, #001850 100%);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            text-align: center;
+        }
+        .quick-estimate-label { color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 4px; }
+        .quick-estimate-range { color: #FADC61; font-size: 1.6rem; font-weight: 800; line-height: 1.1; }
+        .quick-estimate-note { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 6px; }
         .results-preview {
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             padding: 48px 40px;
@@ -847,39 +859,68 @@
             }
         }
     </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.smartlgstx.com/#organization",
+  "name": "SmartLGSTX",
+  "url": "https://www.smartlgstx.com",
+  "telephone": "+18333654789",
+  "email": "chris@smartlgstx.com",
+  "description": "SmartLGSTX helps businesses reduce UPS and FedEx shipping costs through expert carrier contract negotiation.",
+  "areaServed": "US",
+  "serviceType": "Carrier Contract Negotiation",
+  "sameAs": [
+    "https://www.linkedin.com/company/smartlgstx"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Shipping Savings Calculator | SmartLGSTX",
+  "url": "https://www.smartlgstx.com/shipping-savings-calculator/",
+  "isPartOf": {
+    "@id": "https://www.smartlgstx.com/#organization"
+  }
+}
+</script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="logo">Smart<span>LGSTX</span></a>
+            <a href="/" class="logo">Smart<span>LGSTX</span></a>
             <div class="nav-links">
-                <a href="how-it-works.html">How It Works</a>
+                <a href="/how-it-works">How It Works</a>
                 <div class="nav-dropdown">
                     <span class="nav-dropdown-trigger">
                         Industries
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </span>
                     <div class="nav-dropdown-menu">
-                        <a href="dtc-ecommerce-shipping-savings.html">DTC Ecommerce</a>
-                <a href="amazon-fba-shipping-savings.html">Amazon FBA</a>
-                        <a href="amazon-fba-shipping-savings.html">Amazon FBA</a>
-                        <a href="apparel-shipping-savings.html">Apparel</a>
-                        <a href="furniture-shipping-savings.html">Furniture & Home Goods</a>
-                        <a href="mattress-shipping-savings.html">Mattress & Bedding</a>
-                        <a href="auto-parts-shipping-savings.html">Auto Parts</a>
-                        <a href="building-materials-shipping-savings.html">Building Materials</a>
-                        <a href="fitness-shipping-savings.html">Fitness Equipment</a>
-                        <a href="food-beverage-shipping-savings.html">Food & Beverage</a>
-                        <a href="winery-wine-club-shipping-savings.html">Wineries &amp; Wine Clubs</a>
-                        <a href="olive-oil-dtc-shipping-savings.html">Olive Oil &amp; Specialty Food</a>
-                        <a href="manufacturing-shipping-savings.html">Manufacturing</a>
+                        <a href="/dtc-ecommerce-shipping-savings">DTC Ecommerce</a>
+                <a href="/amazon-fba-shipping-savings">Amazon FBA</a>
+                        <a href="/amazon-fba-shipping-savings">Amazon FBA</a>
+                        <a href="/apparel-shipping-savings">Apparel</a>
+                        <a href="/furniture-shipping-savings">Furniture & Home Goods</a>
+                        <a href="/mattress-shipping-savings">Mattress & Bedding</a>
+                        <a href="/auto-parts-shipping-savings">Auto Parts</a>
+                        <a href="/building-materials-shipping-savings">Building Materials</a>
+                        <a href="/fitness-shipping-savings">Fitness Equipment</a>
+                        <a href="/food-beverage-shipping-savings">Food & Beverage</a>
+                        <a href="/winery-wine-club-shipping-savings">Wineries &amp; Wine Clubs</a>
+                        <a href="/olive-oil-dtc-shipping-savings">Olive Oil &amp; Specialty Food</a>
+                        <a href="/manufacturing-shipping-savings">Manufacturing</a>
                     
                     </div>
                 </div>
-                <a href="about.html">About Us</a>
-                <a href="international-shipping.html">International Shipping</a>
-                <a href="get-your-free-audit.html" class="btn-nav">Get Your Free Audit</a>
+                <a href="/about">About Us</a>
+                <a href="/international-shipping">International Shipping</a>
+                <a href="/get-your-free-audit" class="btn-nav">Get Your Free Audit</a>
             </div>
                     
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
@@ -888,21 +929,21 @@
         </div>
         
         <div class="mobile-menu" id="mobileMenu">
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="about.html">About Us</a>
-            <a href="international-shipping.html">International Shipping</a>
-                <a href="dtc-ecommerce-shipping-savings.html">DTC Ecommerce</a>
-                <a href="apparel-shipping-savings.html">Apparel</a>
-            <a href="furniture-shipping-savings.html">Furniture & Home Goods</a>
-            <a href="mattress-shipping-savings.html">Mattress & Bedding</a>
-            <a href="auto-parts-shipping-savings.html">Auto Parts</a>
-            <a href="building-materials-shipping-savings.html">Building Materials</a>
-            <a href="fitness-shipping-savings.html">Fitness Equipment</a>
-            <a href="food-beverage-shipping-savings.html">Food & Beverage</a>
-            <a href="manufacturing-shipping-savings.html">Manufacturing</a>
-            <a href="blog/index.html">Blog</a>
-            <a href="get-your-free-audit.html">Get Your Free Audit</a>
+            <a href="/">Home</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/about">About Us</a>
+            <a href="/international-shipping">International Shipping</a>
+                <a href="/dtc-ecommerce-shipping-savings">DTC Ecommerce</a>
+                <a href="/apparel-shipping-savings">Apparel</a>
+            <a href="/furniture-shipping-savings">Furniture & Home Goods</a>
+            <a href="/mattress-shipping-savings">Mattress & Bedding</a>
+            <a href="/auto-parts-shipping-savings">Auto Parts</a>
+            <a href="/building-materials-shipping-savings">Building Materials</a>
+            <a href="/fitness-shipping-savings">Fitness Equipment</a>
+            <a href="/food-beverage-shipping-savings">Food & Beverage</a>
+            <a href="/manufacturing-shipping-savings">Manufacturing</a>
+            <a href="/blog/">Blog</a>
+            <a href="/get-your-free-audit">Get Your Free Audit</a>
         </div>
 </nav>
 
@@ -955,6 +996,13 @@
                     </div>
                     
                     <div class="form-group">
+
+                        <!-- Quick estimate preview (shows after spend selection) -->
+                        <div class="quick-estimate" id="quickEstimate">
+                            <div class="quick-estimate-label">Quick Estimate</div>
+                            <div class="quick-estimate-range" id="quickRange">—</div>
+                            <div class="quick-estimate-note">Refine your estimate with 2 more questions below</div>
+                        </div>
                         <label class="form-label">Primary Carrier <span class="required-star">*</span> <span style="font-size: 0.875rem; color: #64748b;">(Select all that apply)</span></label>
                         <div class="button-group cols-2">
                             <div class="button-option">
@@ -1552,43 +1600,43 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">Smart<span>LGSTX</span></a>
+                    <a href="/" class="logo">Smart<span>LGSTX</span></a>
                     <p>Shipping cost optimization backed by 50+ years of carrier-side experience. We only get paid when you save.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="international-shipping.html">International Shipping</a></li>
-                        <li><a href="get-your-free-audit.html">Free Audit</a></li>
-                        <li><a href="shipping-savings-calculator.html">Savings Calculator</a></li>
+                        <li><a href="/how-it-works">How It Works</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/international-shipping">International Shipping</a></li>
+                        <li><a href="/get-your-free-audit">Free Audit</a></li>
+                        <li><a href="/shipping-savings-calculator">Savings Calculator</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul>
-                        <li><a href="dtc-ecommerce-shipping-savings.html">DTC Ecommerce</a></li>
-                        <li><a href="apparel-shipping-savings.html">Apparel</a></li>
-                        <li><a href="furniture-shipping-savings.html">Furniture</a></li>
-                        <li><a href="mattress-shipping-savings.html">Mattress</a></li>
-                        <li><a href="auto-parts-shipping-savings.html">Auto Parts</a></li>
-                        <li><a href="fitness-shipping-savings.html">Fitness</a></li>
-                        <li><a href="building-materials-shipping-savings.html">Building Materials</a></li>
-                        <li><a href="food-beverage-shipping-savings.html">Food &amp; Beverage</a></li>
-                        <li><a href="manufacturing-shipping-savings.html">Manufacturing</a></li>
+                        <li><a href="/dtc-ecommerce-shipping-savings">DTC Ecommerce</a></li>
+                        <li><a href="/apparel-shipping-savings">Apparel</a></li>
+                        <li><a href="/furniture-shipping-savings">Furniture</a></li>
+                        <li><a href="/mattress-shipping-savings">Mattress</a></li>
+                        <li><a href="/auto-parts-shipping-savings">Auto Parts</a></li>
+                        <li><a href="/fitness-shipping-savings">Fitness</a></li>
+                        <li><a href="/building-materials-shipping-savings">Building Materials</a></li>
+                        <li><a href="/food-beverage-shipping-savings">Food &amp; Beverage</a></li>
+                        <li><a href="/manufacturing-shipping-savings">Manufacturing</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Get Started</h4>
                     <ul>
-                        <li><a href="get-your-free-audit.html">Free Shipping Audit</a></li>
-                        <li><a href="shipping-savings-calculator.html">Calculate Savings</a></li>
+                        <li><a href="/get-your-free-audit">Free Shipping Audit</a></li>
+                        <li><a href="/shipping-savings-calculator">Calculate Savings</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Smart LGSTX. All rights reserved.</p>
+                <p>© 2026 Smart LGSTX. All rights reserved &nbsp;·&nbsp; <a href="/privacy-policy/" style="color:inherit;opacity:0.7;">Privacy Policy</a>.</p>
             </div>
         </div>
     </footer>
@@ -1596,6 +1644,53 @@
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
         }
+    </script>
+    <script>
+    // Quick estimate on spend selection
+    var spendRanges = {
+        'Under $100K':   ['$8,000',  '$18,000'],
+        '$100K – $200K': ['$15,000', '$40,000'],
+        '$200K – $350K': ['$30,000', '$70,000'],
+        '$350K – $500K': ['$52,000', '$100,000'],
+        'Over $500K':    ['$75,000', '$150,000+']
+    };
+    var spendSel = document.getElementById('annualSpend');
+    var qe = document.getElementById('quickEstimate');
+    var qr = document.getElementById('quickRange');
+    if (spendSel && qe && qr) {
+        spendSel.addEventListener('change', function() {
+            var r = spendRanges[this.value];
+            if (r) {
+                qr.textContent = r[0] + ' – ' + r[1];
+                qe.style.display = 'block';
+                gtag('event', 'calculator_spend_selected', {event_category: 'engagement', event_label: this.value});
+            } else { qe.style.display = 'none'; }
+        });
+    }
+    // GA4: calculator step completions
+    document.querySelectorAll('[onclick^="nextStep"]').forEach(function(btn, i) {
+        btn.addEventListener('click', function() {
+            gtag('event', 'calculator_step_' + (i+1) + '_complete', {event_category: 'engagement'});
+        });
+    });
+    // GA4: calculator results shown
+    var origCalc = window.calculateResults;
+    if (typeof origCalc === 'function') {
+        window.calculateResults = function() {
+            origCalc.apply(this, arguments);
+            gtag('event', 'calculator_completed', {event_category: 'conversion', event_label: 'results_shown'});
+        };
+    }
+    // GA4: phone clicks
+    document.addEventListener('click', function(e) {
+        var t = e.target.closest('a[href^="tel:"]');
+        if (t) gtag('event', 'phone_click', {event_category: 'contact', event_label: 'phone_link'});
+    });
+    // GA4: Calendly
+    window.addEventListener('message', function(e) {
+        if (e.data && e.data.event === 'calendly.event_scheduled')
+            gtag('event', 'calendly_booked', {event_category: 'conversion', event_label: 'call_scheduled'});
+    });
     </script>
 </body>
 </html>

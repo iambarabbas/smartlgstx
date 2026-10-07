@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Dimensional Weight (DIM Weight)? The Complete Guide | SmartLGSTX</title>
+  <meta name="description" content="Dimensional weight explained — how UPS and FedEx calculate DIM weight, when it applies, and how to reduce your DIM weight charges." />
+  <link rel="canonical" href="https://www.smartlgstx.com/what-is-dimensional-weight/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "What Is Dimensional Weight (DIM Weight)? The Complete Guide",
+        "description": "Dimensional weight explained — how UPS and FedEx calculate DIM weight, when it applies, and how to reduce your DIM weight charges.",
+        "url": "https://www.smartlgstx.com/what-is-dimensional-weight/",
+        "author": {"@type": "Organization", "name": "SmartLGSTX"},
+        "publisher": {"@type": "Organization", "name": "SmartLGSTX", "url": "https://www.smartlgstx.com/"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is dimensional weight?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Dimensional weight (DIM weight) is a calculated shipping weight based on a package's volume rather than its actual weight. Carriers charge the greater of actual weight or DIM weight to ensure they're compensated when a lightweight package takes up significant space on a truck or aircraft."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate dimensional weight?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Use the formula: (Length × Width × Height in inches) ÷ DIM Factor = DIM Weight. For domestic UPS and FedEx shipments, the DIM Factor is 139. Round up to the next whole pound. If DIM weight exceeds actual weight, you pay DIM weight."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the DIM factor for UPS and FedEx?",
+            "acceptedAnswer": {"@type": "Answer", "text": "For domestic US shipments, both UPS and FedEx use a DIM factor of 139. For international shipments, the standard DIM factor is 166. Some high-volume shippers negotiate a higher DIM factor in their carrier agreements, reducing their calculated DIM weight."}
+          },
+          {
+            "@type": "Question",
+            "name": "When does dimensional weight apply?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Dimensional weight applies when it exceeds the package's actual physical weight. If a package weighs 3 lbs but has a DIM weight of 10 lbs, you're billed for 10 lbs. UPS and FedEx apply DIM weight pricing to virtually all domestic parcel services as of 2015."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I negotiate my DIM factor?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. High-volume shippers can negotiate a higher DIM factor in their carrier contract — for example, 166 instead of 139. A higher DIM factor produces a lower DIM weight, reducing your billable weight on every DIM-affected package. This is one of the highest-ROI contract terms to negotiate if your shipping profile includes many large, light packages."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #001432; color: #CBD5E1; line-height: 1.7; }
+    a { color: #FADC61; }
+    h1, h2, h3 { color: #fff; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .badge { display: inline-block; background: rgba(250,220,97,0.15); color: #FADC61; border: 1px solid rgba(250,220,97,0.3); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 32px; margin-bottom: 28px; }
+    .callout { background: linear-gradient(135deg, rgba(250,220,97,0.08), rgba(250,220,97,0.04)); border: 1px solid rgba(250,220,97,0.3); border-left: 4px solid #FADC61; border-radius: 8px; padding: 24px 28px; margin: 32px 0; }
+    .callout h3 { color: #FADC61; margin-bottom: 10px; }
+    .formula-box { background: rgba(0,0,0,0.3); border: 2px solid rgba(250,220,97,0.4); border-radius: 12px; padding: 32px; text-align: center; margin: 24px 0; }
+    .formula { font-size: clamp(18px,3vw,28px); font-weight: 800; color: #FADC61; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .formula-sub { font-size: 14px; color: #94A3B8; }
+    .example-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 24px; margin: 20px 0; }
+    .example-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; }
+    .example-row:last-child { border-bottom: none; }
+    .example-label { color: #94A3B8; }
+    .example-value { color: #fff; font-weight: 600; }
+    .example-value.highlight { color: #FADC61; }
+    .dim-factors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
+    .dim-factor-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 20px; text-align: center; }
+    .dim-factor-card .num { font-size: 36px; font-weight: 800; color: #FADC61; margin-bottom: 6px; }
+    .dim-factor-card .label { font-size: 13px; color: #94A3B8; }
+    .tip-item { display: flex; gap: 16px; margin-bottom: 20px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+    .tip-num { min-width: 36px; height: 36px; background: rgba(250,220,97,0.15); border: 1px solid rgba(250,220,97,0.3); color: #FADC61; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .faq-item { padding: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; margin-bottom: 16px; }
+    .faq-q { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .faq-a { font-size: 15px; color: #CBD5E1; }
+    @media (max-width: 640px) { .container { padding: 0 20px; } .dim-factors { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header style="background:rgba(0,20,50,0.95);border-bottom:1px solid rgba(255,255,255,0.08);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;">
+  <a href="/" style="font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-0.02em;">Smart<span style="color:#FADC61;">LGSTX</span></a>
+  <nav style="display:flex;gap:24px;align-items:center;">
+    <a href="/how-it-works" style="color:#94A3B8;text-decoration:none;font-size:14px;">How It Works</a>
+    <a href="/shipping-faq" style="color:#94A3B8;text-decoration:none;font-size:14px;">FAQ</a>
+    <a href="/shipping-glossary" style="color:#94A3B8;text-decoration:none;font-size:14px;">Glossary</a>
+    <a href="/get-your-free-audit" style="background:#FADC61;color:#001432;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">Get Free Audit</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section style="padding:80px 40px 60px;text-align:center;">
+  <div class="container" style="padding:0;">
+    <div class="badge">Complete Guide · Updated 2026</div>
+    <h1 style="font-size:clamp(28px,4vw,46px);font-weight:800;margin-bottom:20px;letter-spacing:-0.03em;">What Is Dimensional Weight (DIM Weight)?</h1>
+    <p style="font-size:18px;color:#94A3B8;max-width:620px;margin:0 auto 32px;">How UPS and FedEx calculate DIM weight, when it applies, worked examples, and 5 ways to reduce your DIM charges.</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- What is DIM weight -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:16px;">What Is Dimensional Weight and Why Does It Exist?</h2>
+    <p style="margin-bottom:14px;">Dimensional weight — also called DIM weight, volumetric weight, or cubed weight — is a pricing method used by UPS, FedEx, and most other major carriers that charges you based on a package's <em>volume</em>, not just its physical weight. The idea is straightforward: a carrier's trucks and aircraft have a fixed amount of space. A lightweight package that takes up a large amount of that space costs the carrier real money in capacity, even if the package itself barely registers on a scale.</p>
+    <p style="margin-bottom:14px;">Before 2015, DIM weight pricing for domestic UPS and FedEx shipments only applied to packages above a certain size threshold. Starting January 1, 2015, both carriers eliminated the threshold — DIM weight pricing now applies to virtually all domestic packages. This was a major shift that significantly increased shipping costs for businesses with "light but large" product profiles: think pillows, pet beds, foam packaging, balloons, large clothing items, or anything shipped in oversized cartons.</p>
+    <p>In practice, DIM weight pricing means you might pay for 22 lbs of shipping weight on a package that physically weighs 4 lbs — if the box is large enough. Understanding how this calculation works and how to manage it is essential for any business that ships product.</p>
+  </div>
+
+  <!-- The Formula -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:20px;">The DIM Weight Formula</h2>
+    <div class="formula-box">
+      <div class="formula">(L × W × H) ÷ DIM Factor = DIM Weight</div>
+      <div class="formula-sub">Measure in inches. Round up to the next whole pound. Use whichever is greater: DIM weight or actual weight.</div>
+    </div>
+    <p style="margin-bottom:16px;">The DIM Factor is a constant divisor set by the carrier. A higher DIM Factor produces a lower DIM weight — which is better for the shipper. Here are the current standard DIM Factors:</p>
+    <div class="dim-factors">
+      <div class="dim-factor-card">
+        <div class="num">139</div>
+        <div class="label">UPS Domestic<br>(standard packages)</div>
+      </div>
+      <div class="dim-factor-card">
+        <div class="num">139</div>
+        <div class="label">FedEx Domestic<br>(standard packages)</div>
+      </div>
+      <div class="dim-factor-card">
+        <div class="num">166</div>
+        <div class="label">UPS &amp; FedEx International<br>(most services)</div>
+      </div>
+    </div>
+    <p style="color:#94A3B8;font-size:14px;">Note: Some negotiated carrier agreements include a higher DIM Factor (166 or even 194 domestically) for large-volume shippers. This is one of the highest-value terms to negotiate in your carrier contract.</p>
+  </div>
+
+  <!-- Worked Example -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:16px;">Worked Example: A 12×12×12 Box</h2>
+    <p style="margin-bottom:20px;">Let's walk through a real calculation. Suppose you're shipping a lightweight product in a standard 12×12×12-inch box, and the packed box weighs 5 lbs.</p>
+    <div class="example-box">
+      <div style="font-size:14px;font-weight:700;color:#94A3B8;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Step-by-step calculation</div>
+      <div class="example-row"><span class="example-label">Package dimensions</span><span class="example-value">12" × 12" × 12"</span></div>
+      <div class="example-row"><span class="example-label">Step 1: Multiply L × W × H</span><span class="example-value">12 × 12 × 12 = 1,728 cubic inches</span></div>
+      <div class="example-row"><span class="example-label">Step 2: Divide by DIM Factor (139)</span><span class="example-value">1,728 ÷ 139 = 12.43 lbs</span></div>
+      <div class="example-row"><span class="example-label">Step 3: Round up to next whole pound</span><span class="example-value">DIM Weight = 13 lbs</span></div>
+      <div class="example-row"><span class="example-label">Actual package weight</span><span class="example-value">5 lbs</span></div>
+      <div class="example-row"><span class="example-label">Billable weight (greater of the two)</span><span class="example-value highlight">13 lbs — you pay for 13 lbs, not 5!</span></div>
+    </div>
+    <p style="margin-top:16px;color:#94A3B8;font-size:14px;">At a Zone 5 UPS Ground rate of roughly $0.90/lb after discounts, that's $11.70 billed vs. $4.50 if actual weight were used — a 160% premium caused by the box size. Multiply this across thousands of packages per month and the impact on shipping cost is dramatic.</p>
+
+    <h3 style="font-size:18px;margin:24px 0 16px;">A Larger Example: The 18×14×12 Box</h3>
+    <div class="example-box">
+      <div class="example-row"><span class="example-label">Package dimensions</span><span class="example-value">18" × 14" × 12"</span></div>
+      <div class="example-row"><span class="example-label">Volume</span><span class="example-value">18 × 14 × 12 = 3,024 cubic inches</span></div>
+      <div class="example-row"><span class="example-label">DIM Weight (÷ 139)</span><span class="example-value">3,024 ÷ 139 = 21.75 → 22 lbs</span></div>
+      <div class="example-row"><span class="example-label">Actual weight</span><span class="example-value">4 lbs</span></div>
+      <div class="example-row"><span class="example-label">Billable weight</span><span class="example-value highlight">22 lbs</span></div>
+    </div>
+    <p style="margin-top:16px;">This is a common scenario for businesses shipping apparel, bedding, stuffed animals, or any product with significant air space in the packaging. If your DIM factor were negotiated to 166, the same box would produce a DIM weight of (3,024 ÷ 166) = 18.2 → 19 lbs — still higher than actual, but 3 lbs lower than at 139, saving roughly $2.70 per package on a per-pound rate of $0.90.</p>
+  </div>
+
+  <!-- When DIM weight applies -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:16px;">When Does Dimensional Weight Apply?</h2>
+    <p style="margin-bottom:14px;">UPS and FedEx apply DIM weight pricing when the calculated DIM weight exceeds the package's actual weight. The carrier then bills the higher of the two numbers as your <strong style="color:#FADC61;">billable weight</strong>.</p>
+    <ul style="margin: 0 0 16px 20px; display:flex; flex-direction:column; gap:8px;">
+      <li>If actual weight (7 lbs) &gt; DIM weight (5 lbs) → you pay for 7 lbs</li>
+      <li>If DIM weight (12 lbs) &gt; actual weight (3 lbs) → you pay for 12 lbs</li>
+    </ul>
+    <p style="margin-bottom:14px;">Both UPS and FedEx apply DIM pricing to ground and express domestic services. International services use the 166 DIM factor by default. The calculation happens automatically when you print a label — carriers also have dimensioning equipment at their facilities that can capture measurements and apply DIM weight retroactively as an adjustment if the declared dimensions were incorrect.</p>
+    <div class="callout">
+      <h3>⚠️ Carrier Dimensioning Equipment</h3>
+      <p style="color:#CBD5E1;">Modern UPS and FedEx facilities use automated dimensioning cameras and scales that capture package measurements as they move through sorting. If your declared dimensions differ from measured dimensions, a DIM weight adjustment can appear on a future invoice — weeks after shipping. Accurate label dimensions are essential to avoid adjustment chargebacks.</p>
+    </div>
+  </div>
+
+  <!-- Calculate your packages -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:16px;">How to Calculate DIM Weight for Your Packages</h2>
+    <p style="margin-bottom:20px;">Follow these steps for each package type in your product catalog:</p>
+    <div style="counter-reset: steps;">
+      <div class="tip-item">
+        <div class="tip-num">1</div>
+        <div><strong style="color:#fff;">Measure accurately — outside dimensions.</strong><p style="margin-top:6px;font-size:14px;color:#94A3B8;">Use a tape measure on the longest side (Length), the next longest (Width), and the shortest (Height) of the outer carton — not the product itself. Round each measurement up to the nearest inch.</p></div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">2</div>
+        <div><strong style="color:#fff;">Multiply L × W × H.</strong><p style="margin-top:6px;font-size:14px;color:#94A3B8;">This gives you the cubic inch volume of the package.</p></div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">3</div>
+        <div><strong style="color:#fff;">Divide by your DIM Factor (139 for standard, or your negotiated factor).</strong><p style="margin-top:6px;font-size:14px;color:#94A3B8;">This gives you the DIM weight in pounds.</p></div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">4</div>
+        <div><strong style="color:#fff;">Round up to the next whole pound.</strong><p style="margin-top:6px;font-size:14px;color:#94A3B8;">13.2 lbs DIM weight bills as 14 lbs.</p></div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">5</div>
+        <div><strong style="color:#fff;">Compare to actual weight — use the larger number.</strong><p style="margin-top:6px;font-size:14px;color:#94A3B8;">This is your billable weight for rate calculation purposes.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 ways to reduce DIM weight charges -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:24px;">5 Ways to Reduce Your DIM Weight Charges</h2>
+
+    <div class="tip-item">
+      <div class="tip-num">1</div>
+      <div>
+        <strong style="color:#fff;">Right-size your packaging.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">The most direct way to reduce DIM weight is to use a smaller box. Work with a packaging engineer or your box supplier to find the optimal carton size for each of your most common order types. Even reducing a box by 2 inches on one dimension can eliminate DIM weight entirely on lightweight products. This is the highest-ROI DIM reduction strategy for most businesses.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">2</div>
+      <div>
+        <strong style="color:#fff;">Eliminate void fill, don't just manage it.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Shippers who use peanuts, air pillows, or paper fill to cushion products in oversized boxes are paying twice: once for the fill material, and again in DIM weight. Re-engineering packaging to minimize void space reduces DIM weight while also cutting material costs.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">3</div>
+      <div>
+        <strong style="color:#fff;">Negotiate a higher DIM Factor in your carrier contract.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">For high-volume shippers, negotiating a DIM factor of 166 (instead of the standard 139) reduces every DIM-affected package's billable weight by approximately 15%. This is a significant savings driver that compounds across your entire DIM-affected package volume — and it's negotiable for businesses shipping above certain monthly thresholds. <a href="/how-carrier-contract-negotiation-works">Learn more about contract negotiation →</a></p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">4</div>
+      <div>
+        <strong style="color:#fff;">Use flat-rate or regional rate packaging where available.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">USPS Priority Mail flat-rate boxes do not use DIM weight pricing — you pay based on the flat rate, regardless of what's inside (within weight limits). For certain product types and zone distances, USPS flat-rate boxes can significantly undercut DIM-billed UPS/FedEx rates. Regional rate packaging offers similar benefits at shorter zone distances.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <div class="tip-num">5</div>
+      <div>
+        <strong style="color:#fff;">Zone skipping for high-DIM-weight product lines.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Zone skipping — consolidating packages and injecting them into the carrier network at a facility closer to the destination — reduces the zone-based cost of shipping, which directly reduces the dollar impact of DIM weight since DIM weight interacts with zone-based rate tables. For businesses with concentrated customer geographies, zone skipping combined with right-sized packaging can deliver compounding savings on DIM-heavy SKUs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:24px;">DIM Weight FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: What is dimensional weight?</div>
+      <div class="faq-a">Dimensional weight (DIM weight) is a calculated shipping weight based on a package's volume rather than its physical weight. Carriers use DIM weight to ensure they're compensated when a light package occupies significant space on a truck or aircraft. You pay whichever is greater: actual weight or DIM weight.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: How do I calculate dimensional weight for my packages?</div>
+      <div class="faq-a">Use this formula: (Length × Width × Height in inches) ÷ DIM Factor = DIM Weight. For standard domestic UPS and FedEx shipments, the DIM Factor is 139. Round the result up to the next whole pound. If your DIM weight exceeds your actual package weight, you'll be billed at DIM weight.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: What is the DIM factor for UPS and FedEx?</div>
+      <div class="faq-a">The standard DIM factor for domestic US shipments is 139 for both UPS and FedEx. For international shipments, the standard factor is 166. High-volume shippers can negotiate a higher domestic DIM factor (such as 166 or 194) in their carrier contracts, which reduces the DIM weight calculated for every qualifying package.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: When does dimensional weight apply?</div>
+      <div class="faq-a">Dimensional weight applies to virtually all domestic UPS and FedEx parcel services as of January 2015. It applies whenever your calculated DIM weight exceeds your package's actual physical weight. Both UPS and FedEx also measure packages with automated dimensioning equipment at their facilities — if your label dimensions are inaccurate, you may receive a DIM weight adjustment on a future invoice.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: Can I negotiate my DIM factor?</div>
+      <div class="faq-a">Yes. Negotiating a higher DIM factor (for example, 166 instead of 139) in your carrier contract is one of the highest-ROI terms available to volume shippers with light-but-large product profiles. A higher DIM factor reduces the calculated DIM weight on every affected package, lowering your effective per-package cost. SmartLGSTX regularly negotiates improved DIM factors as part of comprehensive carrier contract optimization.</div>
+    </div>
+  </div>
+
+  <!-- Internal links -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:40px 0;">
+    <a href="/shipping-surcharge-index" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">📋 Surcharge Index</div>
+      <div style="color:#94A3B8;font-size:14px;">All UPS &amp; FedEx surcharges explained</div>
+    </a>
+    <a href="/how-carrier-contract-negotiation-works" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">🤝 Negotiate Your DIM Factor</div>
+      <div style="color:#94A3B8;font-size:14px;">How carrier contract negotiation works</div>
+    </a>
+    <a href="/shipping-glossary" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">📖 Glossary</div>
+      <div style="color:#94A3B8;font-size:14px;">DIM weight and 50+ terms defined</div>
+    </a>
+    <a href="/shipping-faq" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">❓ Shipping FAQ</div>
+      <div style="color:#94A3B8;font-size:14px;">30 common shipping questions</div>
+    </a>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#001432,#003D70);padding:80px 40px;text-align:center;">
+  <h2 style="font-size:32px;color:#fff;margin-bottom:16px;">See how much your business can save</h2>
+  <p style="color:#94A3B8;font-size:16px;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Most businesses overpay UPS and FedEx by 10–20%. A free audit takes 15 minutes.</p>
+  <a href="/get-your-free-audit" style="background:#FADC61;color:#001432;padding:16px 40px;font-size:16px;font-weight:700;border-radius:8px;text-decoration:none;display:inline-block;">Get Your Free Audit</a>
+</section>
+
+<footer style="background:#000d1f;border-top:1px solid rgba(255,255,255,0.06);padding:40px;text-align:center;color:#475569;font-size:13px;">
+  <p>&copy; 2026 SmartLGSTX. All rights reserved. &nbsp;·&nbsp; <a href="/privacy-policy/" style="color:#64748B;">Privacy Policy</a> &nbsp;·&nbsp; <a href="/shipping-glossary" style="color:#64748B;">Glossary</a> &nbsp;·&nbsp; <a href="/shipping-faq" style="color:#64748B;">FAQ</a></p>
+  <p style="margin-top:8px;">Questions? Call <a href="tel:+18333654789" style="color:#FADC61;">833-365-4789</a> or <a href="mailto:chris@smartlgstx.com" style="color:#FADC61;">chris@smartlgstx.com</a></p>
+</footer>
+
+</body>
+</html>

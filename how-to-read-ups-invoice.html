@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Read Your UPS Invoice: A Line-by-Line Guide | SmartLGSTX</title>
+  <meta name="description" content="Learn how to decode every charge on your UPS shipping invoice — base rates, surcharges, adjustments, and fees that are often negotiable." />
+  <link rel="canonical" href="https://www.smartlgstx.com/how-to-read-ups-invoice/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How to Read Your UPS Invoice: A Line-by-Line Guide",
+        "description": "Learn how to decode every charge on your UPS shipping invoice — base rates, surcharges, adjustments, and fees that are often negotiable.",
+        "url": "https://www.smartlgstx.com/how-to-read-ups-invoice/",
+        "author": {"@type": "Organization", "name": "SmartLGSTX"},
+        "publisher": {"@type": "Organization", "name": "SmartLGSTX", "url": "https://www.smartlgstx.com/"}
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Read and Audit Your UPS Invoice",
+        "description": "A step-by-step guide to decoding UPS invoice charges and identifying opportunities to reduce your shipping costs.",
+        "step": [
+          {"@type": "HowToStep", "name": "Review the Invoice Header", "text": "Confirm account number, invoice date, and payment due date."},
+          {"@type": "HowToStep", "name": "Identify Base Transportation Charges", "text": "Find the base rate by zone, weight, and service level."},
+          {"@type": "HowToStep", "name": "Parse Surcharge Line Items", "text": "Identify each surcharge code and its per-package cost."},
+          {"@type": "HowToStep", "name": "Review Adjustments", "text": "Check for post-shipment weight corrections and address corrections."},
+          {"@type": "HowToStep", "name": "Verify Discount Application", "text": "Confirm your negotiated discounts are correctly applied on every line."}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #001432; color: #CBD5E1; line-height: 1.7; }
+    a { color: #FADC61; }
+    h1, h2, h3 { color: #fff; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .badge { display: inline-block; background: rgba(250,220,97,0.15); color: #FADC61; border: 1px solid rgba(250,220,97,0.3); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 32px; margin-bottom: 28px; }
+    .section-num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #FADC61; color: #001432; border-radius: 50%; font-weight: 800; font-size: 15px; margin-right: 12px; flex-shrink: 0; }
+    .section-header { display: flex; align-items: center; margin-bottom: 20px; }
+    .callout { background: linear-gradient(135deg, rgba(250,220,97,0.08), rgba(250,220,97,0.04)); border: 1px solid rgba(250,220,97,0.3); border-left: 4px solid #FADC61; border-radius: 8px; padding: 24px 28px; margin: 32px 0; }
+    .callout h3 { color: #FADC61; margin-bottom: 12px; }
+    .warning { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-left: 4px solid #EF4444; border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+    .warning h4 { color: #FCA5A5; margin-bottom: 8px; font-size: 15px; }
+    .red-flag { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+    .red-flag:last-child { margin-bottom: 0; }
+    .red-flag-dot { width: 8px; height: 8px; background: #EF4444; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+    .action-step { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+    .action-step-num { width: 36px; height: 36px; background: rgba(250,220,97,0.15); border: 1px solid rgba(250,220,97,0.3); color: #FADC61; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .code-tag { font-family: monospace; background: rgba(255,255,255,0.1); padding: 2px 7px; border-radius: 4px; font-size: 13px; color: #E2E8F0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: rgba(255,255,255,0.08); color: #fff; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+    td { padding: 11px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; color: #CBD5E1; }
+    tr:last-child td { border-bottom: none; }
+    @media (max-width: 640px) { .container { padding: 0 20px; } th, td { padding: 8px 10px; font-size: 13px; } }
+  </style>
+</head>
+<body>
+
+<header style="background:rgba(0,20,50,0.95);border-bottom:1px solid rgba(255,255,255,0.08);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;">
+  <a href="/" style="font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-0.02em;">Smart<span style="color:#FADC61;">LGSTX</span></a>
+  <nav style="display:flex;gap:24px;align-items:center;">
+    <a href="/how-it-works" style="color:#94A3B8;text-decoration:none;font-size:14px;">How It Works</a>
+    <a href="/shipping-faq" style="color:#94A3B8;text-decoration:none;font-size:14px;">FAQ</a>
+    <a href="/shipping-glossary" style="color:#94A3B8;text-decoration:none;font-size:14px;">Glossary</a>
+    <a href="/get-your-free-audit" style="background:#FADC61;color:#001432;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">Get Free Audit</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section style="padding:80px 40px 60px;text-align:center;">
+  <div class="container" style="padding:0;">
+    <div class="badge">Guide · UPS Invoice Breakdown</div>
+    <h1 style="font-size:clamp(28px,4vw,46px);font-weight:800;margin-bottom:20px;letter-spacing:-0.03em;">How to Read Your UPS Invoice:<br>A Line-by-Line Guide</h1>
+    <p style="font-size:18px;color:#94A3B8;max-width:620px;margin:0 auto 32px;">Most businesses pay UPS invoices on autopilot. Here's how to decode every line item — and find the charges you can reduce or eliminate.</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Intro -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:16px;">Why Most Businesses Just Pay Without Looking</h2>
+    <p style="margin-bottom:14px;">A typical UPS invoice for a mid-size e-commerce business might include dozens of line items per page, with codes like <span class="code-tag">RES DLV</span>, <span class="code-tag">FUEL SUR</span>, <span class="code-tag">ADD HDL</span>, and <span class="code-tag">ADDR COR</span> scattered throughout. For an operations manager juggling inventory, customer service, and fulfillment, parsing that invoice line by line feels like a project in itself — so most businesses simply approve payment and move on.</p>
+    <p style="margin-bottom:14px;">The problem: UPS invoices are dense by design. Carriers benefit when shippers don't scrutinize every charge. In our experience auditing hundreds of carrier invoices, we consistently find billing errors, misapplied surcharges, and charges for services that were never negotiated — amounting to <strong style="color:#FADC61;">5–15% of total invoice value</strong> in recoverable costs.</p>
+    <p>This guide walks you through every section of a UPS invoice so you know exactly what you're looking at — and what to question.</p>
+  </div>
+
+  <!-- Section 1: Invoice Header -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2 style="font-size:22px;">The Invoice Header</h2>
+    </div>
+    <p style="margin-bottom:14px;">The invoice header contains administrative information about the billing cycle. Key fields to verify:</p>
+    <table>
+      <thead>
+        <tr><th>Field</th><th>What It Is</th><th>What to Check</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Account Number</strong></td><td>Your UPS shipper account identifier</td><td>Confirm this matches your intended account — especially if you have multiple locations or divisions</td></tr>
+        <tr><td><strong>Invoice Number</strong></td><td>Unique identifier for this billing statement</td><td>Reference this when disputing charges with UPS billing support</td></tr>
+        <tr><td><strong>Invoice Date</strong></td><td>Date the invoice was generated</td><td>UPS invoices weekly; confirm the date range aligns with your expected shipping period</td></tr>
+        <tr><td><strong>Payment Due Date</strong></td><td>When payment must be received</td><td>UPS terms are typically Net 15 or Net 30 — late payments may trigger fees</td></tr>
+        <tr><td><strong>Service Period</strong></td><td>The date range of shipments on this invoice</td><td>Ensure all shipments in this period are accounted for — missing charges can appear in future invoices as adjustments</td></tr>
+      </tbody>
+    </table>
+    <p>If your account number or service period looks wrong, contact UPS billing before paying. Applying payment to an incorrect account or invoice can create reconciliation headaches.</p>
+  </div>
+
+  <!-- Section 2: Base Transportation Charge -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2 style="font-size:22px;">Base Transportation Charge</h2>
+    </div>
+    <p style="margin-bottom:14px;">The base transportation charge is the starting point for each shipment's cost — the "rack rate" before surcharges and after discounts are applied. It's determined by three factors:</p>
+    <ul style="margin: 16px 0 16px 20px; display:flex; flex-direction:column; gap:10px;">
+      <li><strong style="color:#fff;">Service level</strong> — Ground, 2-Day Air, Next Day Air, etc. Each has its own rate table.</li>
+      <li><strong style="color:#fff;">Billable weight</strong> — The greater of actual weight and dimensional (DIM) weight, rounded up to the next whole pound.</li>
+      <li><strong style="color:#fff;">Zone</strong> — The distance band between origin and destination ZIP codes (Zones 2–8). Higher zones = higher rates.</li>
+    </ul>
+    <p style="margin-bottom:14px;">Your invoice should show the base rate for each shipment. If you have a negotiated agreement, you should see a <strong>discount</strong> applied on the same line or nearby — reducing the base charge by your contracted percentage.</p>
+    <div class="warning">
+      <h4>⚠️ Watch for this: Missing discounts</h4>
+      <p style="color:#CBD5E1;font-size:14px;">If you have a negotiated discount but don't see it reflected in the base charge, you may be paying list rates. This happens when account numbers are incorrectly linked or when contracts aren't properly loaded in UPS systems. Always verify discounts are applying correctly on a representative sample of packages each billing period.</p>
+    </div>
+  </div>
+
+  <!-- Section 3: Surcharge Line Items -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2 style="font-size:22px;">Surcharge Line Items</h2>
+    </div>
+    <p style="margin-bottom:16px;">After the base transportation charge, UPS lists applicable surcharges for each package. These appear with abbreviated codes that can be cryptic. Here are the most common:</p>
+    <table>
+      <thead>
+        <tr><th>Invoice Code</th><th>Surcharge Name</th><th>Typical Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="code-tag">FUEL SUR</span></td><td>Fuel Surcharge</td><td>8–14% of transportation charge</td></tr>
+        <tr><td><span class="code-tag">RES DLV</span></td><td>Residential Delivery Surcharge</td><td>$5.55–$8.25 per package</td></tr>
+        <tr><td><span class="code-tag">ADD HDL</span></td><td>Additional Handling Surcharge</td><td>$16–$22 per package</td></tr>
+        <tr><td><span class="code-tag">EDA SUR</span></td><td>Extended Delivery Area Surcharge</td><td>$4.25–$21.00 per package</td></tr>
+        <tr><td><span class="code-tag">PEAK SUR</span></td><td>Peak / Demand Surcharge</td><td>$0.30–$6.00 per package</td></tr>
+        <tr><td><span class="code-tag">LRG PKG</span></td><td>Large Package Surcharge</td><td>$90–$115 per package</td></tr>
+        <tr><td><span class="code-tag">SIG REQ</span></td><td>Signature Required</td><td>$5.55–$7.00 per package</td></tr>
+        <tr><td><span class="code-tag">ADT SIG</span></td><td>Adult Signature Required</td><td>$9.00–$11.00 per package</td></tr>
+        <tr><td><span class="code-tag">SAT DLV</span></td><td>Saturday Delivery</td><td>$16–$22 per package</td></tr>
+        <tr><td><span class="code-tag">DIM ADJ</span></td><td>Dimensional Weight Adjustment</td><td>Varies — additional charge for DIM weight exceeding declared weight</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;">Each surcharge is a separate line per package. A single residential ground package can accumulate: fuel surcharge + residential delivery surcharge + peak surcharge + extended delivery area surcharge — all stacked. This compounding is how surcharges add 20–40% to your base rates. See the full <a href="/shipping-surcharge-index">Surcharge Index</a> for definitions.</p>
+  </div>
+
+  <!-- Section 4: Adjustments -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2 style="font-size:22px;">Adjustments</h2>
+    </div>
+    <p style="margin-bottom:14px;">Adjustments are charges or credits added to your invoice <em>after</em> the original shipment was processed — often appearing on a subsequent invoice rather than the one for the billing period when the package shipped. This makes them especially easy to miss.</p>
+    <p style="margin-bottom:14px;"><strong style="color:#fff;">Common adjustment types:</strong></p>
+    <ul style="margin: 0 0 16px 20px; display:flex; flex-direction:column; gap:8px;">
+      <li><strong>Weight corrections:</strong> UPS reweighed your package and found it heavier than declared. The difference in shipping cost is charged as an adjustment.</li>
+      <li><strong>Address corrections:</strong> An address was corrected post-shipment; the $18–$20.50 fee appears as an adjustment line.</li>
+      <li><strong>Surcharge corrections:</strong> A surcharge was missed at time of shipping and is applied retroactively.</li>
+      <li><strong>Service level changes:</strong> If a package was upgraded or downgraded from the requested service, an adjustment may reflect the rate difference.</li>
+      <li><strong>Credits:</strong> Service failures (late deliveries under UPS Service Guarantee) may generate credits — but only if you request them within the claim window.</li>
+    </ul>
+    <div class="callout">
+      <h3>💡 Claim Your Credits</h3>
+      <p style="color:#CBD5E1;">UPS and FedEx offer service guarantees — if a package arrives late, you may be eligible for a full refund of the shipping charge. But you must request the credit within a narrow window (typically 15 days for UPS). Most businesses never request these credits, leaving significant money on the table. A thorough invoice audit includes late-delivery credit identification.</p>
+    </div>
+  </div>
+
+  <!-- Section 5: Accessorial Charges -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2 style="font-size:22px;">Accessorial Charges</h2>
+    </div>
+    <p style="margin-bottom:14px;">Accessorial charges is the umbrella term for all fees beyond the base transportation rate. Every surcharge discussed in Section 3 is an accessorial charge. On your invoice, accessorials appear grouped by package or listed as a running total at the section level.</p>
+    <p style="margin-bottom:14px;">The key metric to calculate from your invoice is your <strong style="color:#FADC61;">accessorial-to-base-rate ratio</strong>: the total of all surcharges divided by your total base transportation charges. For most businesses this ratio is 25–45%. If yours is above 40%, you have significant optimization opportunity in surcharge reduction and carrier contract negotiation.</p>
+    <p>Your negotiating team (or a carrier consultant like SmartLGSTX) can benchmark your accessorial ratio against similar shippers and identify which surcharges are most negotiable given your profile. <a href="/shipping-surcharge-index">See the full Surcharge Index →</a></p>
+  </div>
+
+  <!-- Section 6: Discounts -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2 style="font-size:22px;">Discounts</h2>
+    </div>
+    <p style="margin-bottom:14px;">If you have a negotiated carrier agreement, your discounts should appear clearly on your invoice — either as a percentage off each base rate line, or as a consolidated discount section showing total savings applied. Here's what to verify:</p>
+    <ul style="margin: 0 0 16px 20px; display:flex; flex-direction:column; gap:8px;">
+      <li>Discount percentages match what's in your carrier agreement — by service type and zone</li>
+      <li>Discounts are applied before fuel surcharge calculation (the correct order) — not after</li>
+      <li>No shipments are being billed at list rate without your discount applied</li>
+      <li>Incentive tiers (if your contract includes volume thresholds for enhanced discounts) are being correctly triggered</li>
+    </ul>
+    <p style="margin-bottom:14px;">One common issue: carriers sometimes apply discounts inconsistently across service types. You may have a 50% discount on Ground but see some packages billed at 30% or 40%. This can happen when shipments are misclassified by service level, or when carrier systems have stale contract data loaded.</p>
+    <p>If you don't have a formal negotiated agreement, the "discount" section may be minimal — which is the biggest cost reduction opportunity available to your business. <a href="/how-carrier-contract-negotiation-works">Learn how contract negotiation works →</a></p>
+  </div>
+
+  <!-- Section 7: Invoice Total -->
+  <div class="card">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2 style="font-size:22px;">Invoice Total &amp; How to Audit It</h2>
+    </div>
+    <p style="margin-bottom:14px;">The invoice total is the sum of all base charges, surcharges, adjustments, minus discounts and credits. Before approving payment, calculate these three ratios for every invoice:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0;">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:20px;">
+        <div style="color:#FADC61;font-weight:700;font-size:14px;margin-bottom:8px;">Cost Per Package</div>
+        <div style="font-size:13px;color:#94A3B8;">Total Invoice ÷ Total Packages. Track week-over-week to catch unexpected spikes.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:20px;">
+        <div style="color:#FADC61;font-weight:700;font-size:14px;margin-bottom:8px;">Surcharge %</div>
+        <div style="font-size:13px;color:#94A3B8;">Total Surcharges ÷ Total Base Charges. Should be tracked monthly — creep upward signals new surcharge categories activating.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:20px;">
+        <div style="color:#FADC61;font-weight:700;font-size:14px;margin-bottom:8px;">Adjustment %</div>
+        <div style="font-size:13px;color:#94A3B8;">Total Adjustments ÷ Total Invoice. High adjustment rates indicate data quality issues (weight, address accuracy).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Red Flags -->
+  <div class="warning" style="margin-bottom:28px;">
+    <h4 style="font-size:17px;">🚩 Common Red Flags to Look for on Your UPS Invoice</h4>
+    <div style="margin-top:12px;">
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Address correction charges appearing frequently — signals a data quality problem at order entry</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Large Package or Additional Handling surcharges on packages you believe are standard-sized — may indicate reweigh/redimensioning errors</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Discounts inconsistently applied — some packages at list rate, others discounted correctly</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Residential surcharges on commercial addresses — carrier database misclassification</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Peak surcharges appearing in non-peak months — verify against carrier's published peak schedule</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>Adjustment charges for reweighs on packages you consistently weigh and measure accurately — may indicate carrier equipment calibration issues</div></div>
+      <div class="red-flag"><div class="red-flag-dot"></div><div>No late delivery credits despite tracking data showing delays — these must be proactively claimed</div></div>
+    </div>
+  </div>
+
+  <!-- 5 Action Steps -->
+  <div class="card">
+    <h2 style="font-size:22px;margin-bottom:24px;">5-Step Action Plan to Reduce Your UPS Invoice</h2>
+
+    <div class="action-step">
+      <div class="action-step-num">1</div>
+      <div>
+        <strong style="color:#fff;">Download your invoice data as a CSV or spreadsheet.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">UPS Billing Center allows you to export transaction-level data. This lets you analyze surcharges by type, total adjustments by category, and cost-per-package trends in a spreadsheet rather than reading through PDF invoices line by line.</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <div class="action-step-num">2</div>
+      <div>
+        <strong style="color:#fff;">Calculate your top 3 surcharge categories by total dollar spend.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Sort your exported data by surcharge type and sum each category. In our experience, fuel, residential delivery, and additional handling or EDA are the top three for most shippers. These are your highest-ROI negotiation targets.</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <div class="action-step-num">3</div>
+      <div>
+        <strong style="color:#fff;">Verify all discounts are applying correctly.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Pull 20 random packages and manually verify that the discount percentage matches your agreement for each service type. If you find discrepancies, contact UPS billing with specific tracking numbers — they can issue credits retroactively for billing errors within your contract term.</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <div class="action-step-num">4</div>
+      <div>
+        <strong style="color:#fff;">File late delivery credit claims for eligible packages.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Cross-reference your packages with UPS tracking data. Packages that arrived one or more days late under a time-definite service (2-Day Air, Next Day Air) may be eligible for a full transportation refund. Use a spreadsheet or third-party invoice audit tool to systematize this process.</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <div class="action-step-num">5</div>
+      <div>
+        <strong style="color:#fff;">Use your data to negotiate your next carrier agreement.</strong>
+        <p style="margin-top:6px;font-size:14px;color:#94A3B8;">Your invoice analysis gives you the negotiation ammunition you need: your zone distribution, service mix, surcharge exposure by category, and volume by weight break. These data points let you target the specific contract terms — DIM factor, residential surcharge cap, fuel surcharge table — that will generate the most savings. Consider working with a carrier consultant to benchmark your terms against market rates. <a href="/how-carrier-contract-negotiation-works">Read: How Contract Negotiation Works →</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Internal links -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:40px 0;">
+    <a href="/shipping-surcharge-index" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">📋 Surcharge Index</div>
+      <div style="color:#94A3B8;font-size:14px;">Every UPS &amp; FedEx surcharge explained</div>
+    </a>
+    <a href="/how-carrier-contract-negotiation-works" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">🤝 Negotiation Guide</div>
+      <div style="color:#94A3B8;font-size:14px;">How contract negotiation actually works</div>
+    </a>
+    <a href="/shipping-glossary" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">📖 Glossary</div>
+      <div style="color:#94A3B8;font-size:14px;">50+ shipping terms defined</div>
+    </a>
+    <a href="/shipping-faq" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;text-decoration:none;display:block;">
+      <div style="color:#FADC61;font-weight:600;margin-bottom:6px;">❓ FAQ</div>
+      <div style="color:#94A3B8;font-size:14px;">30 common shipping questions</div>
+    </a>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#001432,#003D70);padding:80px 40px;text-align:center;">
+  <h2 style="font-size:32px;color:#fff;margin-bottom:16px;">See how much your business can save</h2>
+  <p style="color:#94A3B8;font-size:16px;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Most businesses overpay UPS and FedEx by 10–20%. A free audit takes 15 minutes.</p>
+  <a href="/get-your-free-audit" style="background:#FADC61;color:#001432;padding:16px 40px;font-size:16px;font-weight:700;border-radius:8px;text-decoration:none;display:inline-block;">Get Your Free Audit</a>
+</section>
+
+<footer style="background:#000d1f;border-top:1px solid rgba(255,255,255,0.06);padding:40px;text-align:center;color:#475569;font-size:13px;">
+  <p>&copy; 2026 SmartLGSTX. All rights reserved. &nbsp;·&nbsp; <a href="/privacy-policy/" style="color:#64748B;">Privacy Policy</a> &nbsp;·&nbsp; <a href="/shipping-glossary" style="color:#64748B;">Glossary</a> &nbsp;·&nbsp; <a href="/shipping-faq" style="color:#64748B;">FAQ</a></p>
+  <p style="margin-top:8px;">Questions? Call <a href="tel:+18333654789" style="color:#FADC61;">833-365-4789</a> or <a href="mailto:chris@smartlgstx.com" style="color:#FADC61;">chris@smartlgstx.com</a></p>
+</footer>
+
+</body>
+</html>
