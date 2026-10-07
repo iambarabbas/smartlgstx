@@ -405,23 +405,8 @@
             document.getElementById('mobileMenu').classList.toggle('active');
         }
     </script>
-    <script>
-    // GA4: phone clicks
-    document.addEventListener('click', function(e) {
-        var t = e.target.closest('a[href^="tel:"]');
-        if (t) gtag('event', 'phone_click', {event_category: 'contact', event_label: 'phone_link'});
-    });
-    </script>
     <!-- Calendly widget -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script>
-    window.addEventListener('message', function(e) {
-        if (e.data.event && e.data.event.indexOf('calendly') === 0) {
-            if (e.data.event === 'calendly.event_type_viewed') gtag('event', 'calendly_opened', {event_category: 'engagement'});
-            if (e.data.event === 'calendly.date_and_time_selected') gtag('event', 'calendly_time_selected', {event_category: 'engagement'});
-            if (e.data.event === 'calendly.event_scheduled') gtag('event', 'calendly_booked', {event_category: 'conversion', event_label: 'call_scheduled'});
-        }
-    });
-    </script>
+    <script src="/attribution.js" defer></script>
 </body>
 </html>

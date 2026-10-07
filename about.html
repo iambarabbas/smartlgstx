@@ -424,12 +424,6 @@
             document.getElementById('mobileMenu').classList.toggle('active');
         }
     </script>
-    <script>
-    // GA4: phone clicks
-    document.addEventListener('click', function(e) {
-        var t = e.target.closest('a[href^="tel:"]');
-        if (t) gtag('event', 'phone_click', {event_category: 'contact', event_label: 'phone_link'});
-    });
-    </script>
+    <script src="/attribution.js" defer></script>
 </body>
 </html>
