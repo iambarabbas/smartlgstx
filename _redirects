@@ -1,2 +1,31 @@
-# Cloudflare Pages redirects - only relative paths allowed
-# Domain-level www redirect should be configured in Cloudflare DNS/Rules instead
+# TEC-02: Broken pages — 301 to closest current page
+/contract-optimization-services/ / 301
+/3pl-logistics-services/ / 301
+/team/ /about 301
+/ec/login.php / 301
+/ec/data-processing-agreement / 301
+
+# TEC-01: Legacy .html URLs → clean (belt + suspenders)
+/index.html / 301
+/about.html /about 301
+/how-it-works.html /how-it-works 301
+/get-your-free-audit.html /get-your-free-audit 301
+/shipping-savings-calculator.html /shipping-savings-calculator 301
+/international-shipping.html /international-shipping 301
+/dtc-ecommerce-shipping-savings.html /dtc-ecommerce-shipping-savings 301
+/apparel-shipping-savings.html /apparel-shipping-savings 301
+/furniture-shipping-savings.html /furniture-shipping-savings 301
+/mattress-shipping-savings.html /mattress-shipping-savings 301
+/auto-parts-shipping-savings.html /auto-parts-shipping-savings 301
+/building-materials-shipping-savings.html /building-materials-shipping-savings 301
+/fitness-shipping-savings.html /fitness-shipping-savings 301
+/food-beverage-shipping-savings.html /food-beverage-shipping-savings 301
+/manufacturing-shipping-savings.html /manufacturing-shipping-savings 301
+/winery-wine-club-shipping-savings.html /winery-wine-club-shipping-savings 301
+/olive-oil-dtc-shipping-savings.html /olive-oil-dtc-shipping-savings 301
+/amazon-fba-shipping-savings.html /amazon-fba-shipping-savings 301
+/blog/blog-wine-club-shipping-2026.html /blog/blog-wine-club-shipping-2026 301
+/blog/blog-dtc-bottle-brand-shipping.html /blog/blog-dtc-bottle-brand-shipping 301
+/blog/blog-furniture-shipping-cost-reduction.html /blog/blog-furniture-shipping-cost-reduction 301
+
+/blog/index /blog/ 301

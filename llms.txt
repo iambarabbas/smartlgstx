@@ -1,6 +1,6 @@
 # Smart LGSTX
 
-> Smart LGSTX is a contingency-based shipping cost optimization firm that helps businesses reduce their UPS and FedEx spending by 10–20%. Founded by Chris Tweedy, a former carrier executive with 15+ years on the carrier side, Smart LGSTX audits shipping contracts and negotiates on behalf of shippers. No upfront cost — clients pay only when savings are achieved.
+> Smart LGSTX is a contingency-based shipping cost optimization firm that helps businesses reduce their UPS and FedEx spending by 15–20%. Founded by Chris Tweedy, a former carrier executive with 50+ years of combined carrier-side experience, Smart LGSTX audits shipping contracts and negotiates on behalf of shippers. Contingency-based fee — Smart LGSTX earns a percentage of savings delivered.
 
 ## Who We Help
 
@@ -8,7 +8,7 @@ Businesses spending $100K–$5MM annually with major small parcel carriers (UPS,
 
 ## What We Do
 
-- Free shipping contract audit — identifies overpayments across 250+ contract line items
+- Shipping contract audit — identifies overpayments across 250+ contract line items
 - Expert carrier contract negotiation using insider knowledge of what carriers will actually concede
 - Surcharge reduction: large package fees, additional handling, residential delivery, dimensional weight, demand surcharges, and more
 - Ongoing contract monitoring and renegotiation support
@@ -20,33 +20,35 @@ Contingency-based: Smart LGSTX earns a percentage of the savings achieved. If th
 ## Key Pages
 
 - [Home](https://www.smartlgstx.com/) — Overview, value proposition, how it works
-- [How It Works](https://www.smartlgstx.com/how-it-works.html) — Step-by-step process from audit to savings
-- [About](https://www.smartlgstx.com/about.html) — Founder background, company story
-- [Get Your Free Audit](https://www.smartlgstx.com/get-your-free-audit.html) — Start the savings process
-- [Shipping Savings Calculator](https://www.smartlgstx.com/shipping-savings-calculator.html) — Estimate potential savings
-- [International Shipping](https://www.smartlgstx.com/international-shipping.html) — Cross-border shipping optimization
+- [How It Works](https://www.smartlgstx.com/how-it-works) — Step-by-step process from audit to savings
+- [About](https://www.smartlgstx.com/about) — Founder background, company story
+- [Get Your Audit](https://www.smartlgstx.com/get-your-free-audit) — Start the savings process
+- [Shipping Savings Calculator](https://www.smartlgstx.com/shipping-savings-calculator) — Estimate potential savings
+- [International Shipping](https://www.smartlgstx.com/international-shipping) — Cross-border shipping optimization
 
 ## Industry-Specific Pages
 
-- [DTC / eCommerce](https://www.smartlgstx.com/dtc-ecommerce-shipping-savings.html)
-- [Apparel](https://www.smartlgstx.com/apparel-shipping-savings.html)
-- [Furniture](https://www.smartlgstx.com/furniture-shipping-savings.html)
-- [Mattress](https://www.smartlgstx.com/mattress-shipping-savings.html)
-- [Auto Parts](https://www.smartlgstx.com/auto-parts-shipping-savings.html)
-- [Building Materials](https://www.smartlgstx.com/building-materials-shipping-savings.html)
-- [Fitness Equipment](https://www.smartlgstx.com/fitness-shipping-savings.html)
-- [Food & Beverage](https://www.smartlgstx.com/food-beverage-shipping-savings.html)
-- [Manufacturing](https://www.smartlgstx.com/manufacturing-shipping-savings.html)
-- [Winery / Wine Club](https://www.smartlgstx.com/winery-wine-club-shipping-savings.html)
-- [Olive Oil / DTC](https://www.smartlgstx.com/olive-oil-dtc-shipping-savings.html)
+- [DTC / eCommerce](https://www.smartlgstx.com/dtc-ecommerce-shipping-savings)
+- [Apparel](https://www.smartlgstx.com/apparel-shipping-savings)
+- [Furniture](https://www.smartlgstx.com/furniture-shipping-savings)
+- [Mattress](https://www.smartlgstx.com/mattress-shipping-savings)
+- [Auto Parts](https://www.smartlgstx.com/auto-parts-shipping-savings)
+- [Building Materials](https://www.smartlgstx.com/building-materials-shipping-savings)
+- [Fitness Equipment](https://www.smartlgstx.com/fitness-shipping-savings)
+- [Food & Beverage](https://www.smartlgstx.com/food-beverage-shipping-savings)
+- [Manufacturing](https://www.smartlgstx.com/manufacturing-shipping-savings)
+- [Winery / Wine Club](https://www.smartlgstx.com/winery-wine-club-shipping-savings)
+- [Olive Oil / DTC](https://www.smartlgstx.com/olive-oil-dtc-shipping-savings)
+- [Amazon FBA](https://www.smartlgstx.com/amazon-fba-shipping-savings)
 
 ## Blog
 
 - [Blog Index](https://www.smartlgstx.com/blog/)
-- [Wine Club Shipping 2026](https://www.smartlgstx.com/blog/blog-wine-club-shipping-2026.html)
-- [DTC Bottle Brand Shipping](https://www.smartlgstx.com/blog/blog-dtc-bottle-brand-shipping.html)
+- [Wine Club Shipping 2026](https://www.smartlgstx.com/blog/blog-wine-club-shipping-2026)
+- [DTC Bottle Brand Shipping](https://www.smartlgstx.com/blog/blog-dtc-bottle-brand-shipping)
+- [Furniture Shipping Cost Reduction](https://www.smartlgstx.com/blog/blog-furniture-shipping-cost-reduction)
 
 ## Contact
 
 - Website: https://www.smartlgstx.com
-- Free audit: https://www.smartlgstx.com/get-your-free-audit.html
+- Free audit: https://www.smartlgstx.com/get-your-free-audit
