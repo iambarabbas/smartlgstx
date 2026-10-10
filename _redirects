@@ -29,3 +29,46 @@
 /blog/blog-furniture-shipping-cost-reduction.html /blog/blog-furniture-shipping-cost-reduction 301
 
 /blog/index /blog/ 301
+
+# TEC-03: trailing-slash variants -> clean URLs as 301.
+# Cloudflare's default html_handling answers these with 307 (temporary);
+# _redirects rules always run first, so these make them permanent.
+/about/ /about 301
+/amazon-fba-shipping-savings/ /amazon-fba-shipping-savings 301
+/apparel-shipping-savings/ /apparel-shipping-savings 301
+/auto-parts-shipping-savings/ /auto-parts-shipping-savings 301
+/blog/blog-dtc-bottle-brand-shipping/ /blog/blog-dtc-bottle-brand-shipping 301
+/blog/blog-furniture-shipping-cost-reduction/ /blog/blog-furniture-shipping-cost-reduction 301
+/blog/blog-wine-club-shipping-2026/ /blog/blog-wine-club-shipping-2026 301
+/building-materials-shipping-savings/ /building-materials-shipping-savings 301
+/dtc-ecommerce-shipping-savings/ /dtc-ecommerce-shipping-savings 301
+/fitness-shipping-savings/ /fitness-shipping-savings 301
+/food-beverage-shipping-savings/ /food-beverage-shipping-savings 301
+/furniture-shipping-savings/ /furniture-shipping-savings 301
+/get-your-free-audit/ /get-your-free-audit 301
+/how-carrier-contract-negotiation-works/ /how-carrier-contract-negotiation-works 301
+/how-it-works/ /how-it-works 301
+/how-to-read-ups-invoice/ /how-to-read-ups-invoice 301
+/international-shipping/ /international-shipping 301
+/manufacturing-shipping-savings/ /manufacturing-shipping-savings 301
+/mattress-shipping-savings/ /mattress-shipping-savings 301
+/olive-oil-dtc-shipping-savings/ /olive-oil-dtc-shipping-savings 301
+/privacy-policy/ /privacy-policy 301
+/shipping-faq/ /shipping-faq 301
+/shipping-glossary/ /shipping-glossary 301
+/shipping-savings-calculator/ /shipping-savings-calculator 301
+/shipping-surcharge-index/ /shipping-surcharge-index 301
+/types-of-carrier-surcharges/ /types-of-carrier-surcharges 301
+/what-is-dimensional-weight/ /what-is-dimensional-weight 301
+/winery-wine-club-shipping-savings/ /winery-wine-club-shipping-savings 301
+/blog /blog/ 301
+
+# TEC-03b: .html variants of the newer pages (same 307 -> 301 fix as TEC-01).
+/how-carrier-contract-negotiation-works.html /how-carrier-contract-negotiation-works 301
+/how-to-read-ups-invoice.html /how-to-read-ups-invoice 301
+/privacy-policy.html /privacy-policy 301
+/shipping-faq.html /shipping-faq 301
+/shipping-glossary.html /shipping-glossary 301
+/shipping-surcharge-index.html /shipping-surcharge-index 301
+/types-of-carrier-surcharges.html /types-of-carrier-surcharges 301
+/what-is-dimensional-weight.html /what-is-dimensional-weight 301
