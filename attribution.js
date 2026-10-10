@@ -81,6 +81,21 @@
     });
   });
 
+  // ── Social profile clicks (footer LinkedIn / Facebook / Instagram icons) ──
+  // Sends the network and the clean profile URL so GA4 reports stay readable.
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('a[data-social]');
+    if (!t) return;
+    fire('social_click', {
+      event_category: 'social',
+      social_network: t.dataset.social,
+      cta_location: t.dataset.ctaLocation || getLocation(t),
+      link_url: t.href,
+      link_domain: t.hostname,
+      outbound: true
+    });
+  });
+
   // ── Calendly booking funnel events ────────────────────────────────────────
   window.addEventListener('message', function (e) {
     if (!e.data || !e.data.event) return;
