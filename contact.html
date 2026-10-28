@@ -45,24 +45,8 @@
     <meta name="twitter:image" content="https://www.smartlgstx.com/images/SmartLogistics%20Homepage%20Hero%20Section.jpg" />
     <meta name="twitter:image:alt" content="Talk to Chris, founder of Smart LGSTX" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'navy': '#001850',
-                        'navy-light': '#002470',
-                        'gold': '#FADC61',
-                        'gold-dark': '#E5C94D',
-                        'slate': '#64748B',
-                        'dark': '#32373c',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/inter-v20-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <style>@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter-v20-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
     <style>
         body { font-family: 'Inter', sans-serif; }
         input { color: #1e293b !important; }
@@ -120,9 +104,7 @@
             }
         }
     </style>
-    <!-- Calendly widget -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly loads on demand: /cta.js for the popup, the inline calendar script below -->
 
 <script type="application/ld+json">
 {
@@ -296,6 +278,7 @@ fbq('track', 'PageView');
             .sl-c-cal__mount { min-height: 1000px; }
         }
     </style>
+    <link rel="stylesheet" href="/tailwind.css">
 </head>
 <body class="bg-white text-dark">
     <!-- Navigation -->
@@ -565,10 +548,23 @@ fbq('track', 'PageView');
             if (f) f.value = intent;
             var wide = window.matchMedia('(min-width: 769px)').matches;
             if (!(intent === 'book' || (intent === 'talk' && wide))) return;
-            var mount = document.getElementById('sl-cal-mount'), tries = 0;
+            var mount = document.getElementById('sl-cal-mount'), tries = 0, inited = false;
             window.slCalInline = true;
-            (function go() {
+            if (!window.Calendly) {
+                var l = document.createElement('link');
+                l.rel = 'stylesheet';
+                l.href = 'https://assets.calendly.com/assets/external/widget.css';
+                document.head.appendChild(l);
+                var sc = document.createElement('script');
+                sc.src = 'https://assets.calendly.com/assets/external/widget.js';
+                sc.async = true;
+                sc.onload = function () { tries = 0; go(); };
+                document.head.appendChild(sc);
+            }
+            function go() {
+                if (inited) return;
                 if (window.Calendly && window.Calendly.initInlineWidget) {
+                    inited = true;
                     mount.innerHTML = '';
                     mount.style.height = wide ? '700px' : '1000px';
                     window.Calendly.initInlineWidget({
@@ -576,7 +572,8 @@ fbq('track', 'PageView');
                         parentElement: mount
                     });
                 } else if (++tries < 60) { setTimeout(go, 100); }
-            })();
+            }
+            go();
         })();
 
         // UTM Tracking. In try: when a browser blocks site data, sessionStorage throws,
