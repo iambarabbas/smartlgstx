@@ -124,26 +124,55 @@
       paint();
     }
 
-    // ── Primary buttons: heartbeat + one light sweep when they come on
-    // screen, at most once every 20 seconds per button (styles in cta.css)
+    // ── Primary buttons: each gets one of four treatments (bounce, heartbeat,
+    // glow, sweep) and plays it once when it comes on screen, at most once
+    // every COOLDOWN_MS per button. Timing and strength live in cta.css.
+    var COOLDOWN_MS = 20000;
+    var FIXED_FX = [
+      ['.sl-nav-book', 'glow'],
+      ['.sl-bar__book', 'heart'],
+      ['.sl-mm__talk', 'shine'],
+      ['.sl-c-btn--gold', 'shine']
+    ];
+    var PAGE_FX = ['bounce', 'heart', 'shine']; // page buttons take turns
     var PRIMARY = '.sl-nav-book, .sl-bar__book, .sl-c-btn--gold, .sl-mm__talk, a.btn-primary, a.btn-gold, a.bg-gold, a[style*="background:#FADC61"]';
     var fxEls = document.querySelectorAll(PRIMARY);
     if (fxEls.length && 'IntersectionObserver' in window) {
       var lastRun = new WeakMap();
+      var onScreen = new WeakMap();
+      // Nothing plays until 1.5s after the page has finished loading, so the
+      // first beat lands once the visitor has settled, not during the load
+      var readyAt = 0;
+      var setReady = function () { readyAt = Date.now() + 1500; };
+      if (document.readyState === 'complete') setReady(); else window.addEventListener('load', setReady);
       var play = function (el) {
         var now = Date.now();
-        if (now - (lastRun.get(el) || 0) < 20000) return;
+        if (!onScreen.get(el) || now - (lastRun.get(el) || 0) < COOLDOWN_MS) return;
         lastRun.set(el, now);
         el.classList.remove('sl-cta-play');
         void el.offsetWidth; // restart the animation
         el.classList.add('sl-cta-play');
-        setTimeout(function () { el.classList.remove('sl-cta-play'); }, 2700);
+        setTimeout(function () { el.classList.remove('sl-cta-play'); }, 5000);
+      };
+      var later = function (el) {
+        if (!readyAt) { window.addEventListener('load', function () { later(el); }); return; }
+        setTimeout(function () { play(el); }, Math.max(400, readyAt - Date.now()) + (parseInt(el.style.getPropertyValue('--sl-stagger'), 10) || 0));
       };
       var fxIO = new IntersectionObserver(function (es) {
-        es.forEach(function (x) { if (x.isIntersecting && x.intersectionRatio >= 0.9) setTimeout(function () { play(x.target); }, 400); });
+        es.forEach(function (x) {
+          var vis = x.isIntersecting && x.intersectionRatio >= 0.9;
+          onScreen.set(x.target, vis);
+          if (vis) later(x.target);
+        });
       }, { threshold: [0.9] });
-      fxEls.forEach(function (el) {
-        el.classList.add('sl-cta-fx');
+      var pageIdx = 0;
+      fxEls.forEach(function (el, i) {
+        var fx = null;
+        FIXED_FX.some(function (m) { if (el.matches(m[0])) { fx = m[1]; return true; } return false; });
+        if (!fx) fx = PAGE_FX[pageIdx++ % PAGE_FX.length];
+        el.classList.add('sl-cta-fx', 'sl-fx-' + fx);
+        el.style.setProperty('--sl-stagger', (i % 4) * 700 + 'ms');
+        el.setAttribute('data-sl-fx', fx);
         var s = document.createElement('span');
         s.className = 'sl-shine';
         s.setAttribute('aria-hidden', 'true');
